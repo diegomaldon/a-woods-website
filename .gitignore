@@ -1,0 +1,5 @@
+.DS_Store
+
+# Raw, unprocessed source photos (already resized/compressed into images/gallery/).
+# Kept locally for reference — not needed by the deployed site.
+/ProdPhotos/

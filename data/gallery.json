@@ -1,0 +1,110 @@
+[
+  {
+    "id": "sir-01",
+    "category": "siding-installation-repair",
+    "categoryLabel": "Siding Installation & Repair",
+    "title": "Gable Trim & Fascia Detail",
+    "location": "Columbus Metro Area, OH",
+    "image": "images/gallery/siding-installation-repair-01.jpg",
+    "alt": "Close-up view looking up at a newly installed gable trim corner over Tyvek house wrap, with a window opening visible below."
+  },
+  {
+    "id": "sir-02",
+    "category": "siding-installation-repair",
+    "categoryLabel": "Siding Installation & Repair",
+    "title": "Roofline Trim Detail",
+    "location": "Columbus Metro Area, OH",
+    "image": "images/gallery/siding-installation-repair-02.jpg",
+    "alt": "Upward view of a freshly trimmed roof peak with house wrap and a ladder leaning against the wall below."
+  },
+  {
+    "id": "sir-03",
+    "category": "siding-installation-repair",
+    "categoryLabel": "Siding Installation & Repair",
+    "title": "Full Re-Side in Progress",
+    "location": "Columbus Metro Area, OH",
+    "image": "images/gallery/siding-installation-repair-03.jpg",
+    "alt": "Three-story home partially re-sided in navy blue horizontal siding, with the unfinished section still showing house wrap and scaffolding."
+  },
+  {
+    "id": "sir-04",
+    "category": "siding-installation-repair",
+    "categoryLabel": "Siding Installation & Repair",
+    "title": "New Construction Siding Install",
+    "location": "Columbus Metro Area, OH",
+    "image": "images/gallery/siding-installation-repair-04.jpg",
+    "alt": "Dramatic low-angle view of a new construction home mid-way through a gray horizontal siding installation, with scaffolding in place."
+  },
+  {
+    "id": "cc-01",
+    "category": "commercial-construction",
+    "categoryLabel": "Commercial Construction",
+    "title": "Retail Facade Build-Out",
+    "location": "Columbus Metro Area, OH",
+    "image": "images/gallery/commercial-construction-01.jpg",
+    "alt": "Commercial retail building with a brick base and wood-look panel siding above, under construction with landscaping in front."
+  },
+  {
+    "id": "cc-02",
+    "category": "commercial-construction",
+    "categoryLabel": "Commercial Construction",
+    "title": "Multi-Family Exterior Construction",
+    "location": "Columbus Metro Area, OH",
+    "image": "images/gallery/commercial-construction-02.jpg",
+    "alt": "Multi-family building exterior with dark green board-and-batten siding over a brick base, balconies, and Tyvek-wrapped support post."
+  },
+  {
+    "id": "cc-03",
+    "category": "commercial-construction",
+    "categoryLabel": "Commercial Construction",
+    "title": "Modern Commercial Build — Dusk",
+    "location": "Columbus Metro Area, OH",
+    "image": "images/gallery/commercial-construction-03.jpg",
+    "alt": "Modern commercial building at dusk with dark panel siding, exposed wood eaves, and scaffolding along the upper level."
+  },
+  {
+    "id": "er-01",
+    "category": "exterior-renovation",
+    "categoryLabel": "Exterior Renovation",
+    "title": "Historic Home Re-Side & Porch Refresh",
+    "location": "Columbus Metro Area, OH",
+    "image": "images/gallery/exterior-renovation-01.jpg",
+    "alt": "Historic two-story home with an intact front porch, upper level wrapped in house wrap ahead of new siding installation."
+  },
+  {
+    "id": "er-02",
+    "category": "exterior-renovation",
+    "categoryLabel": "Exterior Renovation",
+    "title": "Covered Porch Renovation",
+    "location": "Columbus Metro Area, OH",
+    "image": "images/gallery/exterior-renovation-02.jpg",
+    "alt": "Covered porch renovation with board-and-batten siding, painted posts, and a natural wood tongue-and-groove ceiling."
+  },
+  {
+    "id": "gc-01",
+    "category": "general-contracting",
+    "categoryLabel": "General Contracting",
+    "title": "Custom Home — Entry Portico",
+    "location": "Columbus Metro Area, OH",
+    "image": "images/gallery/general-contracting-01.jpg",
+    "alt": "Large custom home with an arched entry portico, multiple gables, and house wrap staged ahead of siding installation."
+  },
+  {
+    "id": "gc-02",
+    "category": "general-contracting",
+    "categoryLabel": "General Contracting",
+    "title": "Custom Home — Completed Exterior",
+    "location": "Columbus Metro Area, OH",
+    "image": "images/gallery/general-contracting-02.jpg",
+    "alt": "Large custom home with completed shake-style siding, stone accents, multiple gables, and a poured concrete retaining wall."
+  },
+  {
+    "id": "gc-03",
+    "category": "general-contracting",
+    "categoryLabel": "General Contracting",
+    "title": "Farmhouse New Build — Wraparound Porch",
+    "location": "Columbus Metro Area, OH",
+    "image": "images/gallery/general-contracting-03.jpg",
+    "alt": "New construction farmhouse-style home with sage green board-and-batten siding and a wraparound covered porch, under a clear blue sky."
+  }
+]

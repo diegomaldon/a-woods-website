@@ -1,0 +1,270 @@
+/* ==========================================================================
+   A. Woods — layout.css
+   Header/nav, footer, and page-level grid scaffolding.
+   ========================================================================== */
+
+/* ---- Site header ---- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--ink);
+  border-bottom: var(--border-w) solid var(--accent);
+}
+
+.site-header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-2);
+  gap: var(--space-3);
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  font-family: var(--font-head);
+  color: var(--text-on-ink);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.brand__mark {
+  color: var(--accent-light);
+}
+
+.brand__tag {
+  display: none;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--text-on-ink-muted);
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .brand__tag {
+    display: inline;
+  }
+}
+
+.nav-toggle {
+  background: transparent;
+  border: var(--border-w) solid var(--line-dark);
+  color: var(--text-on-ink);
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.nav-toggle__icon,
+.nav-toggle__icon::before,
+.nav-toggle__icon::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  position: relative;
+}
+
+.nav-toggle__icon::before {
+  position: absolute;
+  top: -6px;
+}
+
+.nav-toggle__icon::after {
+  position: absolute;
+  top: 6px;
+}
+
+@media (min-width: 900px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+.site-nav {
+  display: none;
+  flex-direction: column;
+  border-top: 1px solid var(--line-dark);
+}
+
+.site-nav.is-open {
+  display: flex;
+}
+
+.site-nav__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-nav__link {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-on-ink-muted);
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus-visible,
+.site-nav__link[aria-current="page"] {
+  color: var(--text-on-ink);
+  background: var(--ink-soft);
+}
+
+.site-nav__cta {
+  margin: var(--space-2) var(--space-3);
+}
+
+@media (min-width: 900px) {
+  .site-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: none;
+    gap: var(--space-4);
+  }
+
+  .site-nav__list {
+    flex-direction: row;
+    gap: var(--space-2);
+  }
+
+  .site-nav__link {
+    border-bottom: none;
+    padding: var(--space-1) 0;
+    position: relative;
+  }
+
+  .site-nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: var(--border-w);
+    width: 0;
+    background: var(--accent);
+    transition: width 0.15s ease-out;
+  }
+
+  .site-nav__link:hover::after,
+  .site-nav__link:focus-visible::after,
+  .site-nav__link[aria-current="page"]::after {
+    width: 100%;
+  }
+
+  .site-nav__link:hover,
+  .site-nav__link:focus-visible,
+  .site-nav__link[aria-current="page"] {
+    background: transparent;
+  }
+
+  .site-nav__cta {
+    margin: 0;
+  }
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  background: var(--ink);
+  color: var(--text-on-ink-muted);
+  border-top: var(--border-w) solid var(--accent);
+}
+
+.site-footer__grid {
+  display: grid;
+  gap: var(--space-4);
+  padding-block: var(--space-5);
+}
+
+@media (min-width: 700px) {
+  .site-footer__grid {
+    grid-template-columns: 1.2fr 1fr 1fr;
+  }
+}
+
+.site-footer h3 {
+  color: var(--text-on-ink);
+  font-size: 1rem;
+  margin-bottom: var(--space-2);
+}
+
+.site-footer p,
+.site-footer li {
+  font-size: 0.92rem;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: var(--accent-light);
+}
+
+.site-footer__bottom {
+  border-top: 1px solid var(--line-dark);
+  padding-block: var(--space-2);
+  font-size: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: space-between;
+}
+
+/* ---- Grid scaffolding ---- */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+.grid--4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 640px) {
+  .grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 960px) {
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+.split {
+  display: grid;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .split {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: var(--space-6);
+  }
+  .split--reverse {
+    grid-template-columns: 0.95fr 1.05fr;
+  }
+  .split--reverse > *:first-child {
+    order: 2;
+  }
+}

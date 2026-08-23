@@ -30,16 +30,26 @@ const RATE_LIMIT = { cooldownMs, dailyCap, storageKey }; // client-side throttle
 
 - **Web3Forms access key** — from your Web3Forms dashboard. Already filled
   in for local testing.
-- **hCaptcha** — no separate account or key needed. This uses
+- **hCaptcha** — ✅ enabled and confirmed working. No separate account or key
+  needed — this uses
   [Web3Forms' native hCaptcha integration](https://docs.web3forms.com/getting-started/customizations/spam-protection/hcaptcha):
   the widget markup (`<div class="h-captcha" data-captcha="true">`) and
   script tag (`web3forms.com/client/script.js`) are already in
-  `contact.html`. The only setup step is turning it on in the **Web3Forms
-  dashboard** for this form: Form Settings → Spam Protection → hCaptcha.
-  Until that's switched on, Web3Forms will still accept submissions without
-  a solved captcha — the other three layers below still apply regardless.
+  `contact.html`, and hCaptcha has been switched on for this form in the
+  **Web3Forms dashboard** (Form Settings → Spam Protection → hCaptcha). If
+  this form ever gets recreated with a new access key, that toggle needs to
+  be re-enabled for the new form.
 
 ## Anti-spam / quota protection (why there are four layers)
+
+**Is the exposed access key a security problem?** No — by design. This key
+is meant to sit in client-side code, the same way a Stripe "publishable key"
+or a Google Maps API key does; it identifies which form submissions land in,
+it's not a credential that unlocks the account. The only thing someone could
+do with a copied key is submit junk to this form (spam/quota risk), not read
+past submissions, see other forms, or access the Web3Forms account. If it's
+ever abused, the fix is just generating a new key in the dashboard and
+swapping the one line in `config.js` — no data exposure to clean up.
 
 Web3Forms' free tier caps out at 250 submissions/month. Because this is a
 static site, the access key above is visible to anyone who views the page
@@ -54,11 +64,11 @@ form uses layered defenses, each catching a different threat:
    `config.js`) — a courtesy limiter against accidental double-submits and
    repeat clicks from the same browser. Adjust `cooldownMs` / `dailyCap` as
    needed.
-4. **hCaptcha** — the actual backstop, once enabled in the Web3Forms
-   dashboard (see above). Web3Forms will not accept a submission without a
-   solved challenge, so this is what protects the monthly quota against
-   someone who bypasses the page entirely and calls the Web3Forms API
-   directly with the key.
+4. **hCaptcha** — the actual backstop, enabled in the Web3Forms dashboard
+   (see above) and confirmed working. Web3Forms will not accept a
+   submission without a solved challenge, so this is what protects the
+   monthly quota against someone who bypasses the page entirely and calls
+   the Web3Forms API directly with the key.
 
 If traffic ever threatens the 250/month ceiling despite these, Web3Forms'
 paid tier is inexpensive and requires no code changes — just swap the access
@@ -72,8 +82,8 @@ Things to update as this moves from prototype → live site:
       is currently scoped to `localhost`. Add the GitHub Pages URL when you
       deploy there, then add the client's final domain when it's live (and
       remove `localhost` / the Pages URL once retired).
-- [ ] **hCaptcha** — confirm it's toggled on in the Web3Forms dashboard
-      (Form Settings → Spam Protection → hCaptcha) before launch.
+- [x] **hCaptcha** — toggled on in the Web3Forms dashboard (Form Settings →
+      Spam Protection → hCaptcha) and confirmed working.
 - [ ] **Open Graph tags** — each page's `<meta property="og:*">` tags have
       no `og:url` set (see comment in `index.html`). Add absolute URLs once
       a permanent domain exists.

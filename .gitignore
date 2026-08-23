@@ -3,3 +3,6 @@
 # Raw, unprocessed source photos (already resized/compressed into images/gallery/).
 # Kept locally for reference — not needed by the deployed site.
 /ProdPhotos/
+
+# Business card mockups / brand assets — design deliverables, not part of the site.
+/branding/

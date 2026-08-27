@@ -1,8 +1,11 @@
-# A. Woods — Marketing Site (Prototype)
+# A. Woods — Marketing Site
 
 Static HTML/CSS/JS marketing site for A. Woods, a Columbus, Ohio siding &
-construction contractor. No build step, no framework — built to run as-is
-locally, on GitHub Pages, and later on the client's own domain.
+construction contractor. No build step, no framework.
+
+**Live at [a-woods.com](https://a-woods.com)** — hosted on GitHub Pages,
+with the domain registered/DNS-managed through Cloudflare (DNS only, not
+deployed as a Cloudflare Pages/Workers app).
 
 ## Running it locally
 
@@ -78,15 +81,19 @@ key.
 
 Things to update as this moves from prototype → live site:
 
-- [ ] **Web3Forms allowed domain** — in the Web3Forms dashboard, this form
-      is currently scoped to `localhost`. Add the GitHub Pages URL when you
-      deploy there, then add the client's final domain when it's live (and
-      remove `localhost` / the Pages URL once retired).
+- [x] **Custom domain** — live at [a-woods.com](https://a-woods.com), DNS
+      pointed at GitHub Pages from Cloudflare (registrar/DNS only — the site
+      is NOT deployed as a Cloudflare Pages/Workers app, just hosted on
+      GitHub Pages with Cloudflare providing DNS). HTTPS is enforced.
+- [ ] **Web3Forms allowed domain** — update the Web3Forms dashboard to allow
+      `https://a-woods.com` (remove `localhost` once confirmed working on
+      the real domain).
 - [x] **hCaptcha** — toggled on in the Web3Forms dashboard (Form Settings →
       Spam Protection → hCaptcha) and confirmed working.
-- [ ] **Open Graph tags** — each page's `<meta property="og:*">` tags have
-      no `og:url` set (see comment in `index.html`). Add absolute URLs once
-      a permanent domain exists.
+- [x] **Open Graph tags** — every page now has an absolute `og:url` and
+      `<link rel="canonical">` pointing at `a-woods.com`.
+- [x] **`robots.txt` / `sitemap.xml`** — added at the repo root now that the
+      domain is permanent.
 - [ ] **Hero/banner placeholder images** — see "Images" below; gallery
       photos are already real.
 - [ ] **Gallery photo locations** — replace the generic "Columbus Metro
@@ -95,9 +102,6 @@ Things to update as this moves from prototype → live site:
 - [ ] **Placeholder copy** — phone number, email, address, hours, license
       numbers, and insurance details throughout the site are placeholders
       (search for "placeholder" — every instance is labeled).
-- [ ] **Custom domain on GitHub Pages** (if used as an interim host) — add
-      a `CNAME` file at the repo root once the domain is purchased, per
-      GitHub's docs.
 
 ## Images
 

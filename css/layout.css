@@ -228,6 +228,16 @@
   gap: var(--space-4);
 }
 
+/* Grid items default to min-width:auto, which refuses to shrink narrower
+   than their longest unbreakable word (e.g. an uppercase heading like
+   "CONSTRUCTION") — that silently forces the whole row wider than the
+   viewport on narrow screens. min-width:0 lets the track size correctly
+   and text wrap as normal instead. */
+.grid > *,
+.split > * {
+  min-width: 0;
+}
+
 .grid--2 {
   grid-template-columns: 1fr;
 }

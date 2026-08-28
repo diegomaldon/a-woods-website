@@ -11,7 +11,7 @@
 //    Pages URL there too (e.g. https://yourname.github.io/a-woods-website);
 //    when the client's real domain goes live, add that and remove the old
 //    entries. See README.md → "Migration checklist."
-const WEB3FORMS_ACCESS_KEY = "29bff420-3fae-45cf-ada9-e67974ad5bf4";
+const WEB3FORMS_ACCESS_KEY = "04a1b76e-b72a-492c-941d-ddfbfda853d7";
 
 // 2. HCAPTCHA — no key needed here. This uses Web3Forms' native hCaptcha
 //    integration instead of a standalone hCaptcha account:
